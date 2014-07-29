@@ -18,7 +18,7 @@ RUN apt-get install -y make
 ADD coq /root/coq
 WORKDIR /root/coq
 RUN yes "" |./configure -no-native-compiler
-RUN make -j4
+RUN make -j8
 RUN make install
 
 # Do extraction in test/
