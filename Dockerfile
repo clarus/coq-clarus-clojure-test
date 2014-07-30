@@ -21,7 +21,9 @@ RUN yes "" |./configure -no-native-compiler
 RUN make -j8
 RUN make install
 
-# Do extraction in test/
-ADD test /root/test
-WORKDIR /root/test
-RUN coqc ex1.v
+# Run the tests.
+RUN apt-get install -y ruby
+ADD sample-app /root/sample-app
+ADD tests /root/tests
+WORKDIR /root/tests
+RUN ruby run.rb

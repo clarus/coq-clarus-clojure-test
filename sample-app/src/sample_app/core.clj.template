@@ -1,0 +1,6 @@
+(ns sample-app.core
+  (:gen-class)
+  (:require extraction))
+
+(defn -main []
+  (println Main/%%example-name%%-main))
