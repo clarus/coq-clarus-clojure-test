@@ -11,3 +11,4 @@
 *.glob
 *.aux
 coq
+tests/extraction.clj
