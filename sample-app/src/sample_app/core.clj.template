@@ -3,4 +3,9 @@
   (:require extraction))
 
 (defn -main []
-  (println Main/%%example-name%%-main))
+  (let [
+    result Main/%%example-name%%-main
+    expected-result '(:Coq-Init-Datatypes-true)]
+  (if (= result expected-result)
+    (println "%%example-name%%: ok")
+    (println "%%example-name%%: error: expected" expected-result "but got" result))))
