@@ -7,6 +7,7 @@ To run the tests, clone the branch *Clojure* of https://github.com/clarus/coq in
     git clone https://github.com/clarus/coq.git
     cd coq/
     git branch Clojure
+    cd ..
 
 Then run the `Dokerfile`:
 
